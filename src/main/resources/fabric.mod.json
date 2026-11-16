@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pulsehud",
+  "version": "1.0.0",
+  "name": "PulseHUD",
+  "description": "Client-side PvP HUD and utility mod for Fabric.",
+  "authors": ["PulseHUD"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/pulsehud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.pulsehud.PulseHUDMod"
+    ],
+    "client": [
+      "com.pulsehud.PulseHUDMod"
+    ],
+    "modmenu": [
+      "com.pulsehud.integration.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "pulsehud.mixins"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu:modmenuIntegration": "com.pulsehud.integration.ModMenuIntegration"
+  }
+}
